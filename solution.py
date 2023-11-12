@@ -155,12 +155,12 @@ def process_event(event, points, screen, is_mousebuttondown):
             draw_nearby_points(points, screen, center_coordinates)
 
     elif event.type == pygame.KEYUP:
-        if event.key == 13:  # Enter
+        if event.key == 114:
             points = []
             screen.fill(color='#FFFFFF')
-        elif event.key == 32:  # Space
+        elif event.key == 115:
             points = assign_flags(points)
-        elif event.key == 97:  # 'a'
+        elif event.key == 99:
             points = cluster_data_points(points)
 
     pygame.display.update()
